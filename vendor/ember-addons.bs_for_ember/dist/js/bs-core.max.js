@@ -98,7 +98,7 @@
       }
       pref = this.get('classTypePrefix');
       return "" + pref + "-" + type;
-    }).property('type').cacheable()
+    }).property('type').
   });
 
 }).call(this);
@@ -127,7 +127,7 @@
       } else {
         return null;
       }
-    }).property('xs').cacheable(),
+    }).property('xs').,
     smallSizeClass: (function() {
       var pref;
       pref = this.get('classTypePrefix');
@@ -136,7 +136,7 @@
       } else {
         return null;
       }
-    }).property('small').cacheable(),
+    }).property('small').,
     largeSizeClass: (function() {
       var pref;
       pref = this.get('classTypePrefix');
@@ -145,7 +145,7 @@
       } else {
         return null;
       }
-    }).property('large').cacheable(),
+    }).property('large').,
     sizeClass: (function() {
       var pref, size;
       size = this.get('size');
@@ -155,7 +155,7 @@
       } else {
         return null;
       }
-    }).property('size').cacheable()
+    }).property('size').
   });
 
 }).call(this);
@@ -180,7 +180,7 @@ A mixin for Items that have a value property
       }
       value = this.get('content');
       return value;
-    }).property('content').cacheable()
+    }).property('content').
   });
 
 }).call(this);
@@ -217,7 +217,7 @@ An extra 'active' css class will be assigned to the Item (this) if this is a sel
     /*
     Determine whether the current item is selected,
     if true the 'active' css class will be associated with the this DOM's element.
-    
+
     This is a calculated property and will be retriggered if the 'value' property of the item has changed or the 'selected' property
     in the parent ItemsView.
     */
@@ -234,10 +234,10 @@ An extra 'active' css class will be assigned to the Item (this) if this is a sel
         return false;
       }
       return selected === value;
-    }).property('value', 'parentView.selected', 'content.linkTo').cacheable(),
+    }).property('value', 'parentView.selected', 'content.linkTo').,
     /*
     Handle selection by click event.
-    
+
     The identifier of the selection is based on the 'content' property of this item.
     */
 
@@ -301,7 +301,7 @@ A Mixin that provides the basic configuration for rendering a Bootstrap navigati
       } else {
         return null;
       }
-    }).property('navType').cacheable()
+    }).property('navType').
   });
 
 }).call(this);
@@ -342,10 +342,10 @@ A Mixin that provides the basic configuration for rendering and interacting with
 
   /*
   Views that are rendered as an Item of the ItemsView should extends from this view.
-  
+
   When a click event is received the current item will be stored in the parent view 'selected' property,
   An extra 'active' css class will be assigned to the Item (this) if this is a selected item.
-  
+
   Views that extends this view can be enhanced with:
   ItemSelection: Makes the item selectable.
   */
@@ -366,7 +366,7 @@ A Mixin that provides the basic configuration for rendering and interacting with
       itemTitleKey = itemsView.get('itemTitleKey') || 'title';
       content = this.get('content');
       return getProperty(content, itemTitleKey, content);
-    }).property('content').cacheable(),
+    }).property('content').,
     /*
     Determine whether the item is disabled or not
     */
@@ -382,7 +382,7 @@ A Mixin that provides the basic configuration for rendering and interacting with
         itemsView.set('selected', null);
       }
       return disabled;
-    }).property('content', 'content.disabled').cacheable()
+    }).property('content', 'content.disabled').
   });
 
 }).call(this);
