@@ -34,10 +34,10 @@ Parent component of a progressbar component
     },
     style: (function() {
       return "width:" + this.progress + "%;";
-    }).property('progress').,
+    }).property('progress'),
     ariaValueNow: (function() {
       return this.progress;
-    }).property('progress').
+    }).property('progress')
   });
 
   Ember.Handlebars.helper('bs-progressbar', Bootstrap.BsProgressbarComponent);

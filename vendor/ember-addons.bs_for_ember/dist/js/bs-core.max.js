@@ -98,7 +98,7 @@
       }
       pref = this.get('classTypePrefix');
       return "" + pref + "-" + type;
-    }).property('type').
+    }).property('type')
   });
 
 }).call(this);
@@ -127,7 +127,7 @@
       } else {
         return null;
       }
-    }).property('xs').,
+    }).property('xs'),
     smallSizeClass: (function() {
       var pref;
       pref = this.get('classTypePrefix');
@@ -136,7 +136,7 @@
       } else {
         return null;
       }
-    }).property('small').,
+    }).property('small'),
     largeSizeClass: (function() {
       var pref;
       pref = this.get('classTypePrefix');
@@ -145,7 +145,7 @@
       } else {
         return null;
       }
-    }).property('large').,
+    }).property('large'),
     sizeClass: (function() {
       var pref, size;
       size = this.get('size');
@@ -155,7 +155,7 @@
       } else {
         return null;
       }
-    }).property('size').
+    }).property('size')
   });
 
 }).call(this);
@@ -180,7 +180,7 @@ A mixin for Items that have a value property
       }
       value = this.get('content');
       return value;
-    }).property('content').
+    }).property('content')
   });
 
 }).call(this);
@@ -234,7 +234,7 @@ An extra 'active' css class will be assigned to the Item (this) if this is a sel
         return false;
       }
       return selected === value;
-    }).property('value', 'parentView.selected', 'content.linkTo').,
+    }).property('value', 'parentView.selected', 'content.linkTo'),
     /*
     Handle selection by click event.
 
@@ -301,7 +301,7 @@ A Mixin that provides the basic configuration for rendering a Bootstrap navigati
       } else {
         return null;
       }
-    }).property('navType').
+    }).property('navType')
   });
 
 }).call(this);
@@ -366,7 +366,7 @@ A Mixin that provides the basic configuration for rendering and interacting with
       itemTitleKey = itemsView.get('itemTitleKey') || 'title';
       content = this.get('content');
       return getProperty(content, itemTitleKey, content);
-    }).property('content').,
+    }).property('content'),
     /*
     Determine whether the item is disabled or not
     */
@@ -382,7 +382,7 @@ A Mixin that provides the basic configuration for rendering and interacting with
         itemsView.set('selected', null);
       }
       return disabled;
-    }).property('content', 'content.disabled').
+    }).property('content', 'content.disabled')
   });
 
 }).call(this);
