@@ -34,10 +34,10 @@ Parent component of a progressbar component
     },
     style: (function() {
       return "width:" + this.progress + "%;";
-    }).property('progress').cacheable(),
+    }).property('progress'),
     ariaValueNow: (function() {
       return this.progress;
-    }).property('progress').cacheable()
+    }).property('progress')
   });
 
   Ember.Handlebars.helper('bs-progressbar', Bootstrap.BsProgressbarComponent);
@@ -53,7 +53,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var stack1, hashTypes, hashContexts, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
-  
+
   var buffer = '', stack1, hashContexts, hashTypes, options;
   data.buffer.push("\n    ");
   hashContexts = {'progress': depth0,'type': depth0};
@@ -68,7 +68,7 @@ function program1(depth0,data) {
   }
 
 function program3(depth0,data) {
-  
+
   var buffer = '', hashTypes, hashContexts;
   data.buffer.push("\n    ");
   hashTypes = {};
@@ -83,7 +83,7 @@ function program3(depth0,data) {
   stack1 = helpers['if'].call(depth0, "default", {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   else { data.buffer.push(''); }
-  
+
 });
 
 this["Ember"]["TEMPLATES"]["components/bs-progressbar"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -98,5 +98,5 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "progress", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("% Complete</span>");
   return buffer;
-  
+
 });
